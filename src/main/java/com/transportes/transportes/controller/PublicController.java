@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class PublicController {
     @GetMapping("/home")
     public String home() {
-        return "Bienvenido a la página de inicio";
+        return "Bienvenido a la página de inicio public home este no necesita loguearse para pode ingresar ";
     }
 }

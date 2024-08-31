@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @GetMapping("/home")
 public String home() {
-        return "Bienvenido a la página de inicio privado";
+        return "Bienvenido a la página de inicio privado se necesito loguear para poder ingresar ";
     }
 
     @GetMapping("/admin")
     @PreAuthorize("hasRole('ADMIN')")
     public String admin() {
-        return "Admin";
+        return "es Admin necesito loguearse para ingresar";
     }
 
 }
