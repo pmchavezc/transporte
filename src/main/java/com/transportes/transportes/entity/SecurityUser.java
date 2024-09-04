@@ -16,6 +16,8 @@ public class SecurityUser implements UserDetails {
 
     private User user;
 
+
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singletonList(new SimpleGrantedAuthority(user.getTipo_usuario()));
@@ -29,5 +31,5 @@ public class SecurityUser implements UserDetails {
     @Override
     public String getUsername() {
         return user.getCorreo();
-    }
+    }  // iba colocado user.getCorreo
 }

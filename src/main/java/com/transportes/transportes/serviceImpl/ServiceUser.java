@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 
-public class ServiceUser implements UserDetailsService {
+public class ServiceUser implements UserDetailsService { // iba colocado UserDetailsService
 
     private RepositoryUser userRepository;
 
@@ -24,7 +24,7 @@ public class ServiceUser implements UserDetailsService {
         if (user==null){
             throw new UsernameNotFoundException("Usuario no encontrado");
         } else {
-            return new SecurityUser(user);
+            return new SecurityUser(user); // iba colocado new SecurityUser(user)
         }
 
     }

@@ -19,11 +19,11 @@ public class SecurityConfig {
     @Bean
     public InMemoryUserDetailsManager users(){
         return new InMemoryUserDetailsManager(
-                User.withUsername("user")
+                User.withUsername("user")  //iba colocado el nombre de user
                 .password("{noop}password")
                 .roles("USER")
                 .build(),
-        User.withUsername("admin")
+        User.withUsername("admin") // iba colocado el nombre de admin
                 .password("{noop}password")
                 .roles("ADMIN")
                 .build()
