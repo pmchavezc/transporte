@@ -19,6 +19,7 @@ public String home() {
     @GetMapping("/admin")
     @PreAuthorize("hasRole('ADMIN')")
     public String admin() {
+
         return "Admin";
     }
 
